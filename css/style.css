@@ -197,7 +197,9 @@ i {
 }
 
 
-
+.contactList li:hover {
+    background-color: var(--primaryColor);
+}
 
 
 

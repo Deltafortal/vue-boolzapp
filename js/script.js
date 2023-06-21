@@ -206,11 +206,19 @@ const app = createApp({
 
     },
     methods: {
+
+        // Get avatar Image
         getAvatar(avatar) {
-            let avatar = 'img/' + avatar + '.jpg';
+            avatar = 'img/' + avatar + '.jpg';
             return avatar;
+        },
+
+        // Get Message in Messages
+        getMessage() {
+            
         }
     }
+
 });
 
 app.mount('#root');
