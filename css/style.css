@@ -128,7 +128,10 @@ h3 {
 
 /******************** Contact Side ****************************************/
 
-
+.contactList {
+    overflow-y: auto;
+    height: calc(100% - 240px);
+}
 
 
 
