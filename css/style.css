@@ -9,13 +9,138 @@
 /* Root */
 
 
+:root {
+    --primaryColor: #eaeaea;
+    --secondaryColor: #fff;
+    --complementaryColor: #fafafa;
+    --suggestColor: #8edafc;
+}
+
+
+
+
 
 /* Utils */
+
+.container {
+    height: 92vh;
+    width: 75vw;
+    background-color: white;
+
+    display: flex;
+}
+
+
 
 
 
 /* Generals */
 
+
+#root {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
 body {
-    background-color: rgb(162, 162, 199);
+    background-color: #009688;
+}
+
+
+
+header {
+    height: 80px;
+    background-color: var(--primaryColor);
+    border-bottom: 1px solid var(--primaryColor);
+}
+
+
+
+input {
+    border: 0px solid black;
+    font-size: 18px;
+}
+
+
+
+li {
+    background-color: var(--secondaryColor);
+    border-bottom: 1px solid var(--primaryColor);
+    list-style-type: none;
+    padding: 8px;
+    cursor: pointer;
+
+    display: flex;
+    gap: 25px;
+}
+
+
+
+img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+
+h3 {
+    font-weight: normal;
+}
+
+/***********************************************************************************************
+*************** CONTACT BOX *******************************************************************
+***********************************************************************************************/
+
+.contactsBox {
+    flex-basis: 40%;
+}
+
+
+
+/******************* TOP SIDE  *****************************************/
+
+
+
+
+/*** Notification ***/
+
+.notification {
+    background-color: var(--suggestColor);
+    height: 100px;
+}
+
+
+/*** Search Bar ***/
+
+.search {
+    background-color: var(--complementaryColor);
+    padding: 8px;
+}
+
+.search input {
+    padding: 10px;
+    width: 100%;
+}
+
+
+/******************** Contact Side ****************************************/
+
+
+
+
+
+
+
+
+
+
+/***********************************************************************************************
+*************** CHAT BOX *******************************************************************
+***********************************************************************************************/
+
+.chatBox {
+    flex-basis: 60%;
 }
