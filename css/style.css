@@ -1,0 +1,21 @@
+/* Reset */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Root */
+
+
+
+/* Utils */
+
+
+
+/* Generals */
+
+body {
+    background-color: rgb(162, 162, 199);
+}
