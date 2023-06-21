@@ -62,7 +62,7 @@
                 <div class="contactList">
                     <ul>
                         <li v-for="(contact, id) in contacts">
-                            <img :src="" alt="Contatto">
+                            <img :src="getAvatar(contact.avatar)" alt="Contatto">
                             <h3> {{ contact.name }}</h3>
                             <p></p>
                         </li>

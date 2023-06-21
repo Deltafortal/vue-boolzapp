@@ -201,6 +201,15 @@ const app = createApp({
                 }
               ]
         }
+    },
+    computed: {
+
+    },
+    methods: {
+        getAvatar(avatar) {
+            let avatar = 'img/' + avatar + '.jpg';
+            return avatar;
+        }
     }
 });
 
