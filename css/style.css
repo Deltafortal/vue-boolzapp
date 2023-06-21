@@ -204,3 +204,25 @@ h3 {
 .chatBox {
     flex-basis: 65%;
 }
+
+
+/**** Header ****/
+
+.chatInfo {
+    display: flex;
+    align-items: center;
+}
+
+.info p {
+    margin-top: 3px;
+    color: var(--secondaryText);
+}
+
+
+/**** ChatSpace ****/
+
+.chat {
+    height: calc(100% - 80px);
+    background-image: url(../img/mine.jpg);
+    overflow-y: auto;
+}
