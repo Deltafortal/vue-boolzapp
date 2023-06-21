@@ -26,7 +26,7 @@
                     <!-- Header-->
                     <header>
                         <div class="user">
-                            <img src="img/avatar_io.jpg" alt="La tua immagine">
+                            <img src="img/_io.jpg" alt="La tua immagine">
                             <h4>Nome Utente</h4>
                         </div>
                         <div class="settings">
@@ -61,13 +61,11 @@
                 <!-- Contactside Box-->
                 <div class="contactList">
                     <ul>
-                        <li>
-                            <img src="img/avatar_1.jpg" alt="Contatto">
-                            <h3>Michele</h3>
+                        <li v-for="(contact, id) in contacts">
+                            <img :src="" alt="Contatto">
+                            <h3> {{ contact.name }}</h3>
                             <p></p>
                         </li>
-                        
-                        
                         
                     </ul>
                 </div>
@@ -85,7 +83,7 @@
                     <div class="chatInfo">
 
                         <div class="icon">
-                            <img src="img/avatar_1.jpg" alt="Immagine del contatto">
+                            <img src="img/_1.jpg" alt="Immagine del contatto">
                         </div>
 
                         <div class="info">
