@@ -57,6 +57,10 @@ header {
     height: 80px;
     background-color: var(--primaryColor);
     border-bottom: 1px solid var(--primaryColor);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 
@@ -85,6 +89,7 @@ li {
 img {
     width: 50px;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 
@@ -96,8 +101,9 @@ h3 {
 *************** CONTACT BOX *******************************************************************
 ***********************************************************************************************/
 
+
 .contactsBox {
-    flex-basis: 40%;
+    flex-basis: 35%;
 }
 
 
@@ -105,6 +111,24 @@ h3 {
 /******************* TOP SIDE  *****************************************/
 
 
+/*** Header ***/
+
+.user {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.user h4 {
+    margin-left: 5px;
+}
+
+.settings i {
+    font-size: 23px;
+    color: var(--secondaryText);
+    padding: 15px;
+    cursor: pointer;
+}
 
 
 /*** Notification ***/
@@ -141,6 +165,7 @@ h3 {
 .fix {
     color: var(--secondaryText);
     text-decoration: underline;
+    cursor: pointer;
 }
 
 
@@ -177,5 +202,5 @@ h3 {
 ***********************************************************************************************/
 
 .chatBox {
-    flex-basis: 60%;
+    flex-basis: 65%;
 }
