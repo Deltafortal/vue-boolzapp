@@ -15,6 +15,7 @@
     --complementaryColor: #fafafa;
     --optionalChoice: #8edafc;
     --secondaryText: #6d848b;
+    --yourMsg: #d5f9ba;
 }
 
 
@@ -230,7 +231,33 @@ i {
     height: calc(100% - 80px - 80px);
     background-image: url(../img/mine.jpg);
     overflow-y: auto;
+    padding-top: 30px;
 }
+
+
+.msg {
+    height: 50px;
+}
+
+
+.msg span{
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+
+.your-msg {
+    text-align: right;
+}
+
+
+.your-msg span{
+    background-color: var(--yourMsg);
+}
+
+
 
 
 /**** BottomBar ****/
