@@ -255,7 +255,12 @@ const app = createApp({
           this.currentContact.messages.push(newMessage);
           this.newMessage = '';
 
+
+
           // His Reply
+
+          setTimeout(() => {
+
           newMessage = 
           { 
             id: this.newMessageId,
@@ -265,8 +270,10 @@ const app = createApp({
 
           this.currentContact.messages.push(newMessage);
           this.newMessage = '';
-
+          } , 1000)
         },
+
+        
 
         // Set currend Id
         setCurrentId(id) {
