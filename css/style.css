@@ -245,7 +245,7 @@ i {
 
 
 .msg p{
-    padding: 15px;
+    padding: 18px;
     border-radius: 10px;
     margin: 15px;
     display: inline;
@@ -264,9 +264,17 @@ i {
 
 .sent p{
     background-color: var(--yourMsg);
+    position: relative;
 }
 
 
+time {
+    font-size: 12px;
+    color: var(--secondaryText);
+    position: absolute;
+    bottom: 0px;
+    right: 15px;
+}
 
 
 

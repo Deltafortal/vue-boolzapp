@@ -106,6 +106,7 @@
                         <div v-for="thisMessage in contact.messages" class="msg" :class="thisMessage.status">
                             <p>
                                 {{ thisMessage.message }}
+                                <time :datetime="thisMessage.date">{{ thisMessage.date }}</time>
                             </p>
                         </div>
 
