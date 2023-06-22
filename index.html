@@ -92,6 +92,7 @@
 
                     </div>
                     
+
                     <div class="settings">
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <i class="fa-solid fa-paperclip"></i>
@@ -113,7 +114,7 @@
                 <!-- BottomBar-->
                 <div class="bar">
                     <i class="fa-regular fa-face-smile"></i>
-                    <input type="text" placeholder="Scrivi un messaggio">
+                    <input v-model="newMessage" @keyup.enter="sendMessage" type="text" placeholder="Scrivi un messaggio">
                     <i class="fa-solid fa-microphone"></i>
                 </div>
             </div>

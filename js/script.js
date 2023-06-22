@@ -4,8 +4,9 @@ const { createApp } = Vue;
 const app = createApp({
     data() {
         return {
-            // Current Id
+
             currentId: 1,
+            newMessage: '',
 
             //User info
             user: {
@@ -208,24 +209,50 @@ const app = createApp({
         }
     },
     computed: {
+
+      // Get the current Contact id
       currentContact(){
         return this.contacts.find((contact) => contact.id === this.currentId)
-      }
+      },
+
+
+      // Get the highest id of the contact's chat and return the next one
+      newMessageId() {
+
+        let highestId = 0;
+        this.currentContact.messages.forEach((message) => {
+
+          if(message.id > highestId) highestId = message.id;
+          })
+
+        let newId = 0;
+        newId = ++highestId;
+        return newId;
+      },
     },
+
 
     methods: {
 
         // Get avatar Image
         getAvatar(avatar) {
+
           avatar = 'img/' + avatar + '.jpg';
           return avatar;
         },
 
-        // Get Message in Messages
-        getMessage() {
-          for(contact in contacts) {
-                
-          }
+
+
+        // Add newMessage into the contact messages
+        sendMessage() {
+
+          const newMessage = 
+          { 
+            id: this.newId,
+            message: this.newMessage,
+          };
+          return this.currentContact.messages.push(newMessage);
+        
         },
 
         // Set currend Id
