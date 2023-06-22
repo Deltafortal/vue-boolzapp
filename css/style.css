@@ -240,25 +240,32 @@ i {
 
 .msg {
     height: 50px;
+    margin-bottom: 8px;
 }
 
 
-.msg span{
-    background-color: white;
+.msg p{
     padding: 15px;
     border-radius: 10px;
     margin: 15px;
+    display: inline;
 }
 
 
-.your-msg {
+.received p{
+    background-color: var(--secondaryColor);
+}
+
+
+.sent {
     text-align: right;
 }
 
 
-.your-msg span{
+.sent p{
     background-color: var(--yourMsg);
 }
+
 
 
 
@@ -278,3 +285,10 @@ i {
     padding: 19px;
     width: 80%;
 }
+
+
+
+
+
+
+

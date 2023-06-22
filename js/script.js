@@ -5,7 +5,7 @@ const app = createApp({
     data() {
         return {
             // Current Id
-            currentId: 0,
+            currentId: 1,
 
             //User info
             user: {
@@ -208,8 +208,11 @@ const app = createApp({
         }
     },
     computed: {
-
+      currentContact(){
+        return this.contacts.find((contact) => contact.id === this.currentId)
+      }
     },
+
     methods: {
 
         // Get avatar Image
@@ -227,7 +230,6 @@ const app = createApp({
 
         // Set currend Id
         setCurrentId(id) {
-          console.log(id)
           this.currentId = id;
         }
         

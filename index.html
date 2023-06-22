@@ -64,7 +64,7 @@
                         <li v-for="(contact, id) in contacts" @click="setCurrentId(contact.id)">
                             <img :src="getAvatar(contact.avatar)" alt="Contatto">
                             <h3> {{ contact.name }}</h3>
-                            <p> {{ contact.id }}</p>
+                            <p> </p>
                         </li>
                         
                     </ul>
@@ -83,10 +83,10 @@
                     <div class="chatInfo">
 
                         <div class="icon">
-                            <img src="img/_1.jpg" alt="Immagine del contatto">
+                            <img :src="getAvatar(currentContact.avatar)" alt="Immagine del contatto">
                         </div>
                         <div class="info">
-                            <h4>Michele</h4>
+                            <h4> {{ currentContact.name }}</h4>
                             <p>Ultimo accesso</p>
                         </div>
 
@@ -100,19 +100,12 @@
                 </header>
 
                 <!-- ChatSpace -->
-                <div class="chat">
+                <div v-for="contact in contacts" class="chat" v-show="contact === currentContact">
                         
-                        <div class="msg">
-                            <span>
-                                Come va?
-                            </span>
-                        </div>
-
-                        
-                        <div class="msg your-msg">
-                            <span>
-                                Ciao
-                            </span>
+                        <div v-for="thisMessage in contact.messages" class="msg" :class="thisMessage.status">
+                            <p>
+                                {{ thisMessage.message }}
+                            </p>
                         </div>
 
                 </div>
