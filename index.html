@@ -26,8 +26,8 @@
                     <!-- Header-->
                     <header>
                         <div class="user">
-                            <img src="img/_io.jpg" alt="La tua immagine">
-                            <h4>Nome Utente</h4>
+                            <img :src="getAvatar(user.avatar)" alt="La tua immagine">
+                            <h4> {{ user.name }}</h4>
                         </div>
                         <div class="settings">
                             <i class="fa-solid fa-circle-notch"></i>
@@ -61,10 +61,10 @@
                 <!-- Contactside Box-->
                 <div class="contactList">
                     <ul>
-                        <li v-for="(contact, id) in contacts">
+                        <li v-for="(contact, id) in contacts" @click="setCurrentId(contact.id)">
                             <img :src="getAvatar(contact.avatar)" alt="Contatto">
                             <h3> {{ contact.name }}</h3>
-                            <p></p>
+                            <p> {{ contact.id }}</p>
                         </li>
                         
                     </ul>
@@ -85,7 +85,6 @@
                         <div class="icon">
                             <img src="img/_1.jpg" alt="Immagine del contatto">
                         </div>
-
                         <div class="info">
                             <h4>Michele</h4>
                             <p>Ultimo accesso</p>

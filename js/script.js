@@ -4,10 +4,15 @@ const { createApp } = Vue;
 const app = createApp({
     data() {
         return {
+            // Current Id
+            currentId: 0,
+
+            //User info
             user: {
                 name: 'Nome Utente',
                 avatar: '_io'
               },
+              // Contacts info
               contacts: [
                 {
                   id: 1,
@@ -209,14 +214,23 @@ const app = createApp({
 
         // Get avatar Image
         getAvatar(avatar) {
-            avatar = 'img/' + avatar + '.jpg';
-            return avatar;
+          avatar = 'img/' + avatar + '.jpg';
+          return avatar;
         },
 
         // Get Message in Messages
         getMessage() {
-            
+          for(contact in contacts) {
+                
+          }
+        },
+
+        // Set currend Id
+        setCurrentId(id) {
+          console.log(id)
+          this.currentId = id;
         }
+        
     }
 
 });
