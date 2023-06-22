@@ -221,12 +221,12 @@ const app = createApp({
 
         let highestId = 0;
         this.currentContact.messages.forEach((message) => {
-
           if(message.id > highestId) highestId = message.id;
           })
 
         let newId = 0;
         newId = ++highestId;
+        console.log(newId);
         return newId;
       },
     },
@@ -246,13 +246,26 @@ const app = createApp({
         // Add newMessage into the contact messages
         sendMessage() {
 
-          const newMessage = 
+          let newMessage = 
           { 
-            id: this.newId,
+            id: this.newMessageId,
             message: this.newMessage,
+            status: 'sent',
           };
-          return this.currentContact.messages.push(newMessage);
-        
+          this.currentContact.messages.push(newMessage);
+          this.newMessage = '';
+
+          // His Reply
+          newMessage = 
+          { 
+            id: this.newMessageId,
+            message: 'ok',
+            status: 'received',
+          };
+
+          this.currentContact.messages.push(newMessage);
+          this.newMessage = '';
+
         },
 
         // Set currend Id
