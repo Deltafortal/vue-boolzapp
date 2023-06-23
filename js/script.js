@@ -235,11 +235,11 @@ const app = createApp({
       // Create a new array based on the user's search
       filteredContacts() {
 
-        const term = this.searchedTerm;
+        const term = this.searchedTerm.toLowerCase();
         console.log(term);
 
         return this.contacts.filter((filteredContact) => {
-          return filteredContact.includes(term);
+          return filteredContact.name.toLowerCase().includes(term);
         })
 
       }
