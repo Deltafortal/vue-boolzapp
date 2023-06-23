@@ -16,6 +16,7 @@
     --optionalChoice: #8edafc;
     --secondaryText: #6d848b;
     --yourMsg: #d5f9ba;
+    --iconHover: #FF6D60;
 }
 
 
@@ -104,6 +105,10 @@ i {
     color: var(--secondaryText);
     font-size: 23px;
     cursor: pointer;
+}
+
+i:hover {
+    color: var(--iconHover);
 }
 
 /***********************************************************************************************
@@ -251,12 +256,42 @@ i {
     border-radius: 10px;
     margin: 15px;
     display: inline;
+    position: relative;
+}
+
+
+.msg i {
+    font-size: 13px;
+    transform: translatey(-5px);
+}
+
+
+.msg span {
+    background-color: white;
+    position: absolute;
+    bottom: -33px;
+    right: 10px;
+    z-index: 1;
+    padding: 15px;
+    cursor: pointer;
+    display: none;
+}
+
+.msg .show {
+    display: inline;
 }
 
 
 .received p{
     background-color: var(--secondaryColor);
 }
+
+.received i {
+    display: none;
+}
+
+
+
 
 
 .sent {
@@ -266,8 +301,9 @@ i {
 
 .sent p{
     background-color: var(--yourMsg);
-    position: relative;
 }
+
+
 
 
 time {
@@ -277,6 +313,8 @@ time {
     bottom: 0px;
     right: 15px;
 }
+
+
 
 
 

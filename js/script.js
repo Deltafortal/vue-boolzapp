@@ -242,7 +242,19 @@ const app = createApp({
           return filteredContact.name.toLowerCase().includes(term);
         })
 
+      },
+
+
+      //Get current time
+
+      currentTime() {
+        
+        let today = new Date();
+        let time = today.getHours() + ":" + today.getMinutes();
+
+        return time;
       }
+
     },
 
 
@@ -293,9 +305,11 @@ const app = createApp({
 
         // Set currend Id
         setCurrentId(id) {
+
           this.currentId = id;
-        }
+        },
         
+
     }
 
 });

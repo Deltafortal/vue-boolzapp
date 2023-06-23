@@ -100,13 +100,19 @@
                     </div>
                 </header>
 
+
+
                 <!-- ChatSpace -->
                 <div v-for="contact in contacts" class="chat" v-show="contact === currentContact">
                         
                         <div v-for="thisMessage in contact.messages" class="msg" :class="thisMessage.status">
                             <p>
                                 {{ thisMessage.message }}
-                                <time :datetime="thisMessage.date">{{ thisMessage.date }}</time>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <span>
+                                    Cancella il messaggio
+                                </span>
+                                <time :datetime="thisMessage.Date"> 3 anni fa </time>
                             </p>
                         </div>
 
