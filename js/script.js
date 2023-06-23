@@ -7,6 +7,7 @@ const app = createApp({
 
             currentId: 1,
             newMessage: '',
+            searchedTerm: '',
 
             //User info
             user: {
@@ -229,7 +230,22 @@ const app = createApp({
         console.log(newId);
         return newId;
       },
+
+
+      // Create a new array based on the user's search
+      filteredContacts() {
+
+        const term = this.searchedTerm;
+        console.log(term);
+
+        return this.contacts.filter((filteredContact) => {
+          return filteredContact.includes(term);
+        })
+
+      }
     },
+
+
 
 
     methods: {
